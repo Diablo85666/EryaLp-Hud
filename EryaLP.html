@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jukebox HUD</title>
+  <style>
+    body { background-color: black; color: white; font-family: sans-serif; }
+    .track { margin: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>🎵 Seleziona una canzone</h2>
+  <div class="track" onclick="play('https://dl.dropboxusercontent.com/scl/fi/ozifs9h5hci1ughfr7soj/Ti-senti-mai-fuori-posto-anche-tu-Un-dialogo-poetico.mp3?rlkey=vplful7mj7jqtwi3tre7m9ok4&st=wbfwj80q')">Ti Senti Mai Fuori Posto</div>
+  <div class="track" onclick="play('https://example.com/song2.mp3')">Canzone 2</div>
+  <div class="track" onclick="play('https://example.com/song3.mp3')">Canzone 3</div>
+
+  <audio id="player" controls autoplay style="width:100%; margin-top:20px;"></audio>
+
+  <script>
+    function play(url) {
+      document.getElementById('player').src = url;
+      document.getElementById('player').play();
+    }
+  </script>
+</body>
+</html>
